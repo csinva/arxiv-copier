@@ -4,5 +4,7 @@ This is a small modification of the [webext-copy-title-url](https://github.com/m
 
 - works with relatively recent firefox/chrome
 - copy the title + url as a link by right-clicking a page
-- add by going to chrome extensions and clicking "Load unpacked"
+- adding
+  - download as zip + unzip
+  - go to chrome extensions and click "Load unpacked", then point to the unzipped folder
 - example copied link: [Hierarchical interpretations for neural network predictions](https://arxiv.org/abs/1806.05337)
