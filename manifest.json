@@ -1,38 +1,21 @@
 {
-    "manifest_version": 2,
-    "name": "Copy page title and url",
-    "short_name": "Copy title and url",
-    "description": "Add a context menu item to copy page title (or selected text) and url to clipboard.",
-    "version": "1.3",
-    "homepage_url": "https://github.com/marekjedlinski/webext-copy-title-url",
-    "author": "Marek Jedliński",
-
-    "background": {
-        "persistent": true,
-        "scripts": ["background.js"]
-    },
-
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-
-    "icons": {
-      "48": "icons/copy_title_and_url.png"
-    },
-
-    "permissions": [
-        "activeTab",
-        "contextMenus",
-        "clipboardWrite"
-    ],
-
-    "applications": {
-      "gecko": {
-        "id": "copy_title_and_url@tranglos.com",
-        "strict_min_version": "57.0"
-      }
-    }
+  "manifest_version": 3,
+  "name": "ArXiv/OpenReview \u2192 Markdown Citation (Title + authors)",
+  "version": "1.1.0",
+  "description": "Right-click arXiv/OpenReview pages to copy: Title ([lastnames, year](url)). Abbreviates common ML terms (e.g., LLMs).",
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://arxiv.org/*",
+    "http://arxiv.org/*",
+    "https://openreview.net/*",
+    "http://openreview.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
 }
